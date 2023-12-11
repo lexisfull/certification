@@ -1,21 +1,22 @@
 package Controller;
 
-import Model.IParser;
-import Model.IRequestData;
-import Model.Parser;
-import Model.RequestData;
+import Exceptions.NoFormatDataException;
+import Model.*;
 
 import java.util.Arrays;
 
 public class Controller {
    IRequestData iRequestData = new RequestData();
    IParser iParser = new Parser();
-   String[] data = iParser.data(iRequestData);
+    ICheckData iCheckData = new CheckData();
+   String[] check;
 
-   @Override
-   public String toString() {
-      return "Controller{" +
-              "data=" + Arrays.toString(data) +
-              '}';
-   }
+    {
+        try {
+            check = iCheckData.checkData(iParser.data(iRequestData));
+        } catch (NoFormatDataException e) {
+            System.out.println("Неправильный формат ввода, всего " + e.getSize() + " значений, должно быть 6!");;
+        }
+    }
+
 }

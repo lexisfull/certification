@@ -1,15 +1,13 @@
 package Model;
 
-public class CheckData {
-    private String[] data;
+import Exceptions.NoFormatDataException;
 
-    public String[] checkData(String[] data) {
-        if(data == null && data.length < 6){
-            for (int i = 0; i < 2; i++) {
-                if(Character.isDigit(data[i].charAt(i))){
-                    System.out.println("ФИО не может содержать цифр");
-                }
-        }
-        return null;
+public class CheckData implements ICheckData{
+    String[] data;
+    @Override
+    public String[] checkData(String[] data) throws NoFormatDataException{
+        if(data.length != 6) throw new NoFormatDataException(data.length);
+
+        return data;
     }
 }
