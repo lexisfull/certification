@@ -7,6 +7,7 @@ public class RequestData implements IRequestData {
 
     public String prompt(){
         System.out.println("Введите через пробел: \nФамилия Имя Отчество,\n" +
+                "при отстутствии отчества пишете нет\n" +
                 "дата рождения, формата - (dd.mm.yyyy),\n" +
                 "номер телефона без префикса \"+\",\n" +
                 "пол: f - женский, m - мужской. \n");
