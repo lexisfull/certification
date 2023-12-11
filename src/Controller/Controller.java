@@ -5,7 +5,6 @@ import Model.*;
 import Views.IView;
 import Views.View;
 
-import java.util.Arrays;
 
 public class Controller {
    IRequestData iRequestData = new RequestData();
