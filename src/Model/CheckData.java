@@ -25,7 +25,7 @@ public class CheckData implements ICheckData{
                 String[] yearBirthday = data[i].replace(",", ".").replace(".", " ").split(" ");
                 for (int j = 0; j < yearBirthday.length; j++) {
                     for (int k = 0; k < yearBirthday[j].length() && onlyDigit; k++) {
-                        if(!Character.isDigit(yearBirthday[j].charAt(k))
+                        if(!Character.isDigit(yearBirthday[j].charAt(k)) || yearBirthday.length < 3
                                 || yearBirthday[0].length() != 2 || yearBirthday[1].length() != 2
                                 || yearBirthday[2].length() != 4){
                             onlyDigit = false;

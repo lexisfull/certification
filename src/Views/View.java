@@ -3,8 +3,7 @@ package Views;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Writer;
-import java.util.Scanner;
-
+// Этот класс собирает данные в строку и отправляет на запись
 public class View implements IView{
     private String[] res;
 
