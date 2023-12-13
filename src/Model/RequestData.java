@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class RequestData implements IRequestData {
     private String value;
-
+// Класс запрашивает ввод данных
     public String prompt(){
         System.out.println("Введите через пробел: \nФамилия Имя Отчество,\n" +
                 "при отстутствии отчества введите - нет\n" +
